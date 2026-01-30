@@ -5,17 +5,24 @@ void setup(){
 
   var textX = random(50, 550);
   var textY = random(50, 350);
-  var yourName = "Your Name";
+  var yourName = "Elene";
 
   fill(241,9,55);
   textSize(40);
-  text("Hiiii, " + yourName, textX, textY);
+  text("Hiiii, " + "Elene", textX, textY);
 }
 
 //🟢Draw Function - Runs on Repeat
-draw = function(){  
-
+draw = function(){ 
+    var starSize = random(2,12);
+  var starX = mouseX + random(-12,12);
+  var starY = mouseY + random(-12,12);
+  textSize(starSize);
+  text("⭐",starX, starY);
 };
+
+
+
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
@@ -29,6 +36,7 @@ var drawStar = function(){
   text("⭐",starX, starY);
 };
 
+
 //🟡mouseClicked Function - will run when the mouse is clicked
 mouseClicked = function(){
   var myText = "x: " + mouseX + "\ny: " + mouseY;
@@ -37,4 +45,6 @@ mouseClicked = function(){
   drawStar();
   drawStar();
   drawStar();
+ 
+  
 };
